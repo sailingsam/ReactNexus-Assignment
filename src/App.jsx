@@ -2,18 +2,25 @@ import { useState } from "react";
 import MainPage from "./MainPage";
 import MCs from "../src/Components/DataTable/MCs/MCtable";
 import DataTable from "./Components/DataTable/DataTable/DataTable";
+import Disclamer from "./Components/Disclamer/Disclamer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Disclamer />
       <MainPage />
       <MCs />
       <div className="w-full h-3/4 xl:flex justify-around items-start p-5 mt-5">
-        <DataTable title="Speakers" data={speakersData} columns={speakersColumns} />
-        <DataTable title="Attendees" data={attendeesData} columns={attendeesColumns} />
+        <DataTable
+          title="Speakers"
+          data={speakersData}
+          columns={speakersColumns}
+        />
+        <DataTable
+          title="Attendees (Sample data)"
+          data={attendeesData}
+          columns={attendeesColumns}
+        />
       </div>
     </>
   );
@@ -239,38 +246,138 @@ const speakersData = [
     name: "Atiksh Srivastava",
     title: "Software Developer",
     company: "Olvy",
-  }
+  },
 ];
 
 const attendeesData = [
   { name: "John Doe", email: "john.doe@example.com", contact: "1234567890" },
-  { name: "Jane Smith", email: "jane.smith@example.com", contact: "0987654321" },
-  { name: "Alice Johnson", email: "alice.johnson@example.com", contact: "2345678901" },
+  {
+    name: "Jane Smith",
+    email: "jane.smith@example.com",
+    contact: "0987654321",
+  },
+  {
+    name: "Alice Johnson",
+    email: "alice.johnson@example.com",
+    contact: "2345678901",
+  },
   { name: "Bob Brown", email: "bob.brown@example.com", contact: "3456789012" },
-  { name: "Charlie Davis", email: "charlie.davis@example.com", contact: "4567890123" },
-  { name: "Daisy Evans", email: "daisy.evans@example.com", contact: "5678901234" },
-  { name: "Evan Foster", email: "evan.foster@example.com", contact: "6789012345" },
-  { name: "Fiona Green", email: "fiona.green@example.com", contact: "7890123456" },
-  { name: "George Harris", email: "george.harris@example.com", contact: "8901234567" },
-  { name: "Hannah King", email: "hannah.king@example.com", contact: "9012345678" },
+  {
+    name: "Charlie Davis",
+    email: "charlie.davis@example.com",
+    contact: "4567890123",
+  },
+  {
+    name: "Daisy Evans",
+    email: "daisy.evans@example.com",
+    contact: "5678901234",
+  },
+  {
+    name: "Evan Foster",
+    email: "evan.foster@example.com",
+    contact: "6789012345",
+  },
+  {
+    name: "Fiona Green",
+    email: "fiona.green@example.com",
+    contact: "7890123456",
+  },
+  {
+    name: "George Harris",
+    email: "george.harris@example.com",
+    contact: "8901234567",
+  },
+  {
+    name: "Hannah King",
+    email: "hannah.king@example.com",
+    contact: "9012345678",
+  },
   { name: "Ian Lewis", email: "ian.lewis@example.com", contact: "0123456789" },
-  { name: "Jackie Martin", email: "jackie.martin@example.com", contact: "1234567890" },
-  { name: "Kyle Nelson", email: "kyle.nelson@example.com", contact: "2345678901" },
-  { name: "Luna Owens", email: "luna.owens@example.com", contact: "3456789012" },
-  { name: "Mason Perry", email: "mason.perry@example.com", contact: "4567890123" },
-  { name: "Nina Quinn", email: "nina.quinn@example.com", contact: "5678901234" },
-  { name: "Oscar Roberts", email: "oscar.roberts@example.com", contact: "6789012345" },
-  { name: "Paula Stewart", email: "paula.stewart@example.com", contact: "7890123456" },
-  { name: "Quinn Taylor", email: "quinn.taylor@example.com", contact: "8901234567" },
-  { name: "Ryan White", email: "ryan.white@example.com", contact: "9012345678" },
-  { name: "Sophie Young", email: "sophie.young@example.com", contact: "0123456789" },
-  { name: "Travis Zhao", email: "travis.zhao@example.com", contact: "1234567890" },
-  { name: "Uma Bennett", email: "uma.bennett@example.com", contact: "2345678901" },
-  { name: "Victor Chan", email: "victor.chan@example.com", contact: "3456789012" },
-  { name: "Wendy Dixon", email: "wendy.dixon@example.com", contact: "4567890123" },
-  { name: "Xander Lee", email: "xander.lee@example.com", contact: "5678901234" },
-  { name: "Yara Moore", email: "yara.moore@example.com", contact: "6789012345" },
-  { name: "Zane Patel", email: "zane.patel@example.com", contact: "7890123456" },
+  {
+    name: "Jackie Martin",
+    email: "jackie.martin@example.com",
+    contact: "1234567890",
+  },
+  {
+    name: "Kyle Nelson",
+    email: "kyle.nelson@example.com",
+    contact: "2345678901",
+  },
+  {
+    name: "Luna Owens",
+    email: "luna.owens@example.com",
+    contact: "3456789012",
+  },
+  {
+    name: "Mason Perry",
+    email: "mason.perry@example.com",
+    contact: "4567890123",
+  },
+  {
+    name: "Nina Quinn",
+    email: "nina.quinn@example.com",
+    contact: "5678901234",
+  },
+  {
+    name: "Oscar Roberts",
+    email: "oscar.roberts@example.com",
+    contact: "6789012345",
+  },
+  {
+    name: "Paula Stewart",
+    email: "paula.stewart@example.com",
+    contact: "7890123456",
+  },
+  {
+    name: "Quinn Taylor",
+    email: "quinn.taylor@example.com",
+    contact: "8901234567",
+  },
+  {
+    name: "Ryan White",
+    email: "ryan.white@example.com",
+    contact: "9012345678",
+  },
+  {
+    name: "Sophie Young",
+    email: "sophie.young@example.com",
+    contact: "0123456789",
+  },
+  {
+    name: "Travis Zhao",
+    email: "travis.zhao@example.com",
+    contact: "1234567890",
+  },
+  {
+    name: "Uma Bennett",
+    email: "uma.bennett@example.com",
+    contact: "2345678901",
+  },
+  {
+    name: "Victor Chan",
+    email: "victor.chan@example.com",
+    contact: "3456789012",
+  },
+  {
+    name: "Wendy Dixon",
+    email: "wendy.dixon@example.com",
+    contact: "4567890123",
+  },
+  {
+    name: "Xander Lee",
+    email: "xander.lee@example.com",
+    contact: "5678901234",
+  },
+  {
+    name: "Yara Moore",
+    email: "yara.moore@example.com",
+    contact: "6789012345",
+  },
+  {
+    name: "Zane Patel",
+    email: "zane.patel@example.com",
+    contact: "7890123456",
+  },
 ];
 
 const speakersColumns = [
